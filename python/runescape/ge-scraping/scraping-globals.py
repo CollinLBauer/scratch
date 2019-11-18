@@ -1,0 +1,1 @@
+EXCHAGNE_URL_STUB = "https://oldschool.runescape.wiki/w/Exchange:"
