@@ -1,0 +1,22 @@
+#pseudo-code
+
+def getExchangeValue:
+    String price
+
+    # construct link to get excahnge value from
+    String[] nameParts = name.split(" ")
+    String linkName = "oldschool.runescape.wiki/w/Exchange:"
+    for part in nameParts:
+        linkName += part + "_"
+    linkName = linkName[0:linkName.length-1]
+
+    if GoToLink(linkName).exists():
+        # look for span id="GEPrice" and retrieve the current price
+        price = getGEPrice(linkName)
+    else:
+        price = "Not sold"
+    return price
+
+def main:
+    for food on list:
+       exchangeValue = getExchangeValue(food.name)
